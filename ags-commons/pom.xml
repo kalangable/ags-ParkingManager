@@ -7,9 +7,7 @@
 		<artifactId>ags-parent</artifactId>
 		<version>1.0.1</version>
 	</parent>
-	<groupId>com.ags</groupId>
 	<artifactId>ags-commons</artifactId>
-	<version>1.0.1</version>
 	<packaging>jar</packaging>
 	<name>Module Commons AGS - Parking Manager</name>
 	<url>http://maven.apache.org</url>
