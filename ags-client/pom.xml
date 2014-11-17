@@ -16,6 +16,10 @@
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-core</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.ags</groupId>
+			<artifactId>ags-models</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>client-${project.version}</finalName>

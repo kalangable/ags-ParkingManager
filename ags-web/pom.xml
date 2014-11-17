@@ -28,10 +28,7 @@
 			<groupId>com.ags</groupId>
 			<artifactId>ags-commons</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.ags</groupId>
-			<artifactId>ags-models</artifactId>
-		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
