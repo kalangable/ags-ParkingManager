@@ -3,9 +3,9 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 	<package name="automovel" extends="struts-default">
-		<action name="ListaAutomovel" class="com.ags.client.Automovel"
+		<action name="ListaAutomovel" class="com.ags.client.AutomovelAction"
 			method="list">
-			<result>/cliente/listaAutomovel.jsp</result>
+			<result name="success">client/listaAutomovel.jsp</result>
 		</action>
 		<!-- Add your actions here -->
 	</package>

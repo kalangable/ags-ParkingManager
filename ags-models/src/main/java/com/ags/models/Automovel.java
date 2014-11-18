@@ -6,10 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Data;
-
 @Entity
-@Data
 public class Automovel {
 
 	@Id
@@ -19,5 +16,23 @@ public class Automovel {
 	private String placa;
 	@Column( length = 60 )
 	private String descricao;
+	public Long getId() {
+		return id;
+	}
+	public void setId( Long id ) {
+		this.id = id;
+	}
+	public String getPlaca() {
+		return placa;
+	}
+	public void setPlaca( String placa ) {
+		this.placa = placa;
+	}
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao( String descricao ) {
+		this.descricao = descricao;
+	}
 
 }
