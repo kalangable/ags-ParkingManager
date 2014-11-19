@@ -1,5 +1,3 @@
-import org.junit.Test;
-
 import com.ags.client.AutomovelAction;
 
 public class Automovel {

@@ -1,20 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC>
 <%@taglib uri="/struts-tags" prefix="s"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Registration Page</title>
 
 <s:head />
-<style type="text/css">
-@import url(bootstrap/css/bootstrap-theme.min.css);
-</style>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="<c:url value="bootstrap/css/bootstrap-theme.min.css" />">
+
 </head>
 <body>
 	<div class="content">
-		<table class="automovelTable" cellpadding="5px">
+		<table class="table">
 			<tr>
 				<th>Placa</th>
 				<th>Descricao</th>
@@ -27,5 +29,10 @@
 			</s:iterator>
 		</table>
 	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="<c:url value="bootstrap/js/bootstrap.min.js" />"></script>
 </body>
 </html>
