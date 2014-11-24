@@ -5,7 +5,11 @@
 	<package name="automovel" extends="struts-default">
 		<action name="ListaAutomovel" class="com.ags.client.AutomovelAction"
 			method="list">
-			<result name="success">client/listaAutomovel.jsp</result>
+			<result name="success">client/automovel/listaAutomovel.jsp</result>
+		</action>
+		<action name="InserirAutomovel" class="com.ags.client.AutomovelAction"
+			method="inserir">
+			<result name="success">client/automovel/inserirAutomovel.jsp</result>
 		</action>
 		<!-- Add your actions here -->
 	</package>
