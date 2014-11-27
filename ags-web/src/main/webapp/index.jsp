@@ -1,29 +1,41 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<title>AGS - Parking Manager</title>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
+<link rel="stylesheet" type="text/css"
+	href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css"
+	href="bootstrap/css/bootstrap.css.map">
+<link rel="stylesheet" type="text/css"
+	href="bootstrap/css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css"
+	href="bootstrap/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css"
+	href="bootstrap/css/bootstrap-theme.css">
+
+<title>AGS Parking Menager</title>
+
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
+	<nav class="navbar navbar-inverse navbar-fixed-top"
+		style="height: 60px">
+
+		<div class="container-fluid">
+
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-					aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Project name</a>
+
+
+				<a class="navbar-brand" href=""><font>AGS- Parking
+						Menager</font></a>
+
 			</div>
+
+
 			<div id="navbar" class="navbar-collapse collapse">
+				<a class="navbar-brand" href=""><font> Empresa</font></a> <a
+					class="navbar-brand" href=""><font> Planos</font></a> <a
+					class="navbar-brand" href=""><font> Case</font></a>
+
 				<form class="navbar-form navbar-right" role="form">
 					<div class="form-group">
 						<input type="text" placeholder="Email" class="form-control">
@@ -31,62 +43,87 @@
 					<div class="form-group">
 						<input type="password" placeholder="Password" class="form-control">
 					</div>
-					<button type="submit" class="btn btn-success">Sign in</button>
+					<button type="submit" class="btn btn-primary">
+						<font><font>Login</font></font>
+					</button>
+
+					<button type="submit" class="btn btn-primary">
+						<font><font>Cadastre-se</font></font>
+					</button>
+
 				</form>
 			</div>
 			<!--/.navbar-collapse -->
 		</div>
 	</nav>
-
-	<!-- Main jumbotron for a primary marketing message or call to action -->
 	<div class="jumbotron">
 		<div class="container">
-			<h1>Hello, world!</h1>
-			<p>This is a template for a simple marketing or informational
-				website. It includes a large callout called a jumbotron and three
-				supporting pieces of content. Use it as a starting point to create
-				something more unique.</p>
+			<h1>
+				<font>AGS- Parking Manager</font>
+			</h1>
 			<p>
-				<a class="btn btn-primary btn-lg" href="#" role="button">Learn
-					more &raquo;</a>
+				<font>AGS Parking Manager, apresenta uma visão de maior
+					controle sobre as vagas disponíveis de estacionamentos privados,
+					mapeamento de vagas desocupadas, controle de fluxo de veículos, . </font>.
+			</p>
+			<p>
+				<a class="btn btn-primary btn-lg" href="" role="button"><font>Saber
+						mais</font></a>
 			</p>
 		</div>
 	</div>
-
 	<div class="container">
 		<!-- Example row of columns -->
 		<div class="row">
 			<div class="col-md-4">
-				<h2>Heading</h2>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce
-					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-					magna mollis euismod. Donec sed odio dui.</p>
+				<h2>
+					<font><font>Título</font></font>
+				</h2>
 				<p>
-					<a class="btn btn-default" href="#" role="button">View details
-						&raquo;</a>
+					<font><font>Donec id elit non mi porta gestantes a
+							eget metus. </font><font>Dapibus Fusce, Tellus ac cursus commodo,
+							tortor mauris condimentum nibh, fermentum ut massa justo sit amet
+							risus. </font><font>Etiam porta sem malesuada magna mollis
+							euismod. </font><font>Donec sed dui odio.</font></font>
+				</p>
+				<p>
+					<button type="submit" class="btn btn-primary">
+						<font><font>Saber mais</font></font>
+					</button>
 				</p>
 			</div>
 			<div class="col-md-4">
-				<h2>Heading</h2>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce
-					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-					magna mollis euismod. Donec sed odio dui.</p>
+				<h2>
+					<font><font>Título</font></font>
+				</h2>
 				<p>
-					<a class="btn btn-default" href="#" role="button">View details
-						&raquo;</a>
+					<font><font>Donec id elit non mi porta gestantes a
+							eget metus. </font><font>Dapibus Fusce, Tellus ac cursus commodo,
+							tortor mauris condimentum nibh, fermentum ut massa justo sit amet
+							risus. </font><font>Etiam porta sem malesuada magna mollis
+							euismod. </font><font>Donec sed dui odio.</font></font>
+				</p>
+				<p>
+					<button type="submit" class="btn btn-primary">
+						<font><font>Saber mais</font></font>
+					</button>
 				</p>
 			</div>
 			<div class="col-md-4">
-				<h2>Heading</h2>
-				<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
-					egestas eget quam. Vestibulum id ligula porta felis euismod semper.
-					Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-					nibh, ut fermentum massa justo sit amet risus.</p>
+				<h2>
+					<font><font>Título</font></font>
+				</h2>
 				<p>
-					<a class="btn btn-default" href="#" role="button">View details
-						&raquo;</a>
+					<font><font>Donec sed dui odio. </font><font>Cras
+							odio justo, dapibus ac facilisis in, egestas eget quam. </font><font>Vestibulum
+							id ligula porta felis euismod sempre. </font><font>Dapibus Fusce,
+							Tellus ac cursus commodo, tortor mauris condimentum nibh,
+							fermentum ut massa justo sit amet risus.</font></font>
+				</p>
+				<p>
+					<button type="submit" class="btn btn-primary">
+						<font><font>Saber mais</font></font>
+					</button>
 				</p>
 			</div>
 		</div>
@@ -94,17 +131,10 @@
 		<hr>
 
 		<footer>
-			<p>&copy; Company 2014</p>
+			<p>
+				<font><font>© Empresa 2014</font></font>
+			</p>
 		</footer>
 	</div>
-	<!-- /container -->
-
-
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
