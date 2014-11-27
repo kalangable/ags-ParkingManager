@@ -26,7 +26,7 @@
 
 
 				<a class="navbar-brand" href=""><font>AGS- Parking
-						Menager</font></a>
+						Manager</font></a>
 
 			</div>
 
