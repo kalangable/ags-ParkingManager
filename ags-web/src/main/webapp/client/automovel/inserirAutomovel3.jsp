@@ -15,30 +15,12 @@
 
 </head>
 <body>
-	<div class="col-md-5">
-		<div class="panel panel-default">
-			<div class="panel-heading">Incluir Automóvel</div>
-			<div class="panel-body">
-				<form role="form" action="SalvarAutomovel" method="post">
-					<div class="form-group">
-						<label for="placa">Placa</label> <input type="text"
-							name="automovelBean.placa" id="placa" class="form-control"
-							placeholder="XXX-9999" required>
-					</div>
-					<div class="form-group">
-						<label for="descricao">Descrição</label> <input type="text"
-							name="automovelBean.descricao" id="descricao"
-							class="form-control" placeholder="Santana" required>
-					</div>
-					<div class="form-group">
-
-						<button type="submit" class="btn btn-primary">Enviar</button>
-						<button type="reset" class="btn btn-default">Limpar</button>
-
-					</div>
-				</form>
-			</div>
-		</div>
+	<div class="content">
+		<s:form value="inserirAutomovel">
+			<s:textfield name="automovelBean.placa" label="Placa"></s:textfield>
+			<s:textfield name="automovelBean.descricao" label="Descrição"></s:textfield>
+			<s:submit value="inserirAutomovel" label="OK" />
+		</s:form>
 	</div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script

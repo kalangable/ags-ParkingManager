@@ -8,9 +8,20 @@
 			<result name="success">client/automovel/listaAutomovel.jsp</result>
 		</action>
 		<action name="InserirAutomovel" class="com.ags.client.AutomovelAction"
-			method="inserir">
+			method="execute">
 			<result name="success">client/automovel/inserirAutomovel.jsp</result>
 		</action>
-		<!-- Add your actions here -->
+		<action name="EditarAutomovel" class="com.ags.client.AutomovelAction"
+			method="editar">
+			<result name="success">client/automovel/editarAutomovel.jsp</result>
+		</action>
+		<action name="AtualizarAutomovel" class="com.ags.client.AutomovelAction"
+			method="atualizar">
+			<result name="success">client/automovel/listaAutomovel.jsp</result>
+		</action>
+		<action name="SalvarAutomovel" class="com.ags.client.AutomovelAction"
+			method="inserir">
+			<result name="success">client/automovel/listaAutomovel.jsp</result>
+		</action>
 	</package>
 </struts>
