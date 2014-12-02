@@ -17,19 +17,23 @@
 <body>
 	<div class="col-md-5">
 		<div class="panel panel-default">
-			<div class="panel-heading">Incluir Automóvel</div>
+			<div class="panel-heading">Editar Automóvel</div>
 			<div class="panel-body">
-				<form role="form" action="SalvarAutomovel" method="post">
-					<div class="form-group">
-						<label for="placa">Placa</label> <input type="text"
-							name="automovelBean.placa" id="placa" class="form-control"
-							placeholder="XXX-9999" required>
-					</div>
-					<div class="form-group">
-						<label for="descricao">Descrição</label> <input type="text"
-							name="automovelBean.descricao" id="descricao"
-							class="form-control" placeholder="Santana" required>
-					</div>
+				<form role="form" action="AtualizarAutomovel" method="post">
+					<s:push value="automovelBean">
+						<div class="form-group">
+							<label for="placa">Placa</label> <input type="text"
+								name="automovelBean.placa" id="placa" class="form-control"
+								placeholder="XXX-9999" required
+								value=<s:property value="placa"/>>
+						</div>
+						<div class="form-group">
+							<label for="descricao">Descrição</label> <input type="text"
+								name="automovelBean.descricao" id="descricao"
+								class="form-control" placeholder="Santana" required
+								value=<s:property value="descricao"/>>
+						</div>
+					</s:push>
 					<div class="form-group">
 
 						<button type="submit" class="btn btn-primary">Enviar</button>

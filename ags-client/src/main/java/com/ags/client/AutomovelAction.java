@@ -11,25 +11,48 @@ public class AutomovelAction extends ActionSupport {
 	/**
 	 * 
 	 */
+
+
 	private static final long serialVersionUID = -7946045564136959507L;
 	private AutomovelDao dao = new AutomovelDao();
 	private List<Automovel> listaAutomovel;
 	private Automovel automovelBean;
+	private long id;
 
 	public String inserir() {
 
 		if ( automovelBean != null ) {
 			System.out.println( automovelBean.getPlaca() );
 			System.out.println( automovelBean.getDescricao() );
+			System.err.println( this.dao.create( automovelBean ) );
+			dao.salvar();
 		}
 
+		return SUCCESS;
+	}
+
+	public String atualizar() {
+
+		if ( automovelBean != null ) {
+			System.out.println( automovelBean.getPlaca() );
+			System.out.println( automovelBean.getDescricao() );
+			System.err.println( this.dao.create( automovelBean ) );
+			dao.update();
+		}
+
+		return SUCCESS;
+	}
+
+	public String editar() {
+		System.out.println( "Recebi id:" + id );
+		automovelBean = dao.read( id );
+		System.out.println( "Verificando objeto: " + automovelBean.getPlaca() );
 		return SUCCESS;
 	}
 
 	public String list() {
 		listaAutomovel = new ArrayList<Automovel>();
 		this.listaAutomovel = dao.list();
-
 		return SUCCESS;
 	}
 
@@ -47,6 +70,14 @@ public class AutomovelAction extends ActionSupport {
 
 	public void setAutomovelBean( Automovel automovelBean ) {
 		this.automovelBean = automovelBean;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId( long id ) {
+		this.id = id;
 	}
 
 }
