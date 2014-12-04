@@ -4,18 +4,18 @@ import java.util.List;
 
 import com.ags.dao.Employee;
 import com.ags.dao.EmployeeDao;
-import com.ags.dao.InMemoryEmployeeDao;
+import com.ags.dao.EmployeeDaoImpl;
 
 public class DefaultEmployeeService implements EmployeeService {
 
     private EmployeeDao dao;
 
     public DefaultEmployeeService() {
-        this.dao = new InMemoryEmployeeDao();
+        this.dao = new EmployeeDaoImpl();
     }
 
     @Override
-    public List getAllEmployees() {
+    public List<Employee> getAllEmployees() {
         return dao.getAllEmployees();
     }
 

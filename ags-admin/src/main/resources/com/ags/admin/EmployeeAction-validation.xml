@@ -3,22 +3,22 @@
 <validators>
   <field name="employee.firstName">
      <field-validator type="requiredstring">
-          <message key="errors.required.firstname"/>
+          <message key="Nome é um valor Obrigatório"/>
       </field-validator>
   </field>
   <field name="employee.lastName">
      <field-validator type="requiredstring">
-          <message key="errors.required.lastname"/>
+          <message key="Sobrenome é um valor Obrigatório"/>
       </field-validator>
   </field>
   <field name="employee.age">
      <field-validator type="required" short-circuit="true">
-          <message key="errors.required.age"/>
+          <message key="Idade é um valor Obrigatório"/>
       </field-validator>
       <field-validator type="int">
       		<param name="min">18</param>
       		<param name="max">65</param>
-          	<message key="errors.required.age.limit"/>
+          	<message key="A idade deve estar entre 18 e 65 anos"/>
       </field-validator>
   </field>
 </validators>

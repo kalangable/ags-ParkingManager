@@ -15,9 +15,10 @@
 	<style type="text/css">
 	</style>
 </head>
+
 <body>
 	<jsp:include page = "menu.jsp" />  
-	
+
 	<div class="container">
 		<div class="col-md-6">
 			<div class="panel panel-info">
@@ -28,12 +29,11 @@
 					    <s:textfield name="employee.lastName" value="%{employee.lastName}" label="Sobrenome" />
 					    <s:textfield name="employee.age" value="%{employee.age}" label="Idade" size="20" cssClass="form-control"/>
 					    
-					   	<s:textfield name="employee.password" value="%{employee.password}" label="%{getText('label.password')}"/>
-						<s:textfield name="employee.username" value="%{employee.username}" label="%{getText('label.username')}"/>
+					   	<s:textfield name="employee.password" value="%{employee.password}" label="Senha"/>
+						<s:textfield name="employee.username" value="%{employee.username}" label="Username"/>
 						
 					    <s:hidden name="employee.employeeId" value="%{employee.employeeId}"/>
-					    <s:submit value="%{getText('button.label.submit')}" cssClass="btn btn-primary"/>
-					    <s:submit value="%{getText('button.label.cancel')}" action="index" cssClass="btn btn-default"/>
+					    <s:submit value="Registrar" cssClass="btn btn-primary"/>
 					</s:form>
 				</div>
 			</div>

@@ -4,7 +4,6 @@
 <head>
 <%-- <link href="<s:url value='/css/main.css'/>" rel="stylesheet" --%>
 <!-- 	type="text/css" /> -->
-
 <link
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -39,7 +38,7 @@
 	<div class="container">
 			<div class="panel panel">
 				<h1>
-					<s:text name="label.employees" />
+					<s:text name="Empregados" />
 				</h1>
 				<s:url id="url" action="inputEmployee" />
 				<a href="<s:property value="#url"/>">Adicionar novo funcionário</a>
@@ -47,13 +46,13 @@
 				<table class="table">
 					<tr>
 						<th style="background-color: #CDCDCD"><s:text
-								name="label.firstName" /></th>
+								name="Primeiro nome" /></th>
 						<th style="background-color: #CDCDCD"><s:text
-								name="label.lastName" /></th>
+								name="Último nome" /></th>
 						<th style="background-color: #CDCDCD"><s:text
-								name="label.age" /></th>
+								name="Idade" /></th>
 						<th style="background-color: #CDCDCD"><s:text
-						 		name="label.options"></s:text></th>
+						 		name="Opções"></s:text></th>
 					</tr>
 					<s:iterator value="employees" status="status">
 						<tr>
@@ -64,12 +63,12 @@
 							
 							<s:url action="inputEmployee" id="url">
 							<s:param name="employee.employeeId" value="employeeId" />
-							</s:url> <a href="<s:property value="#url"/>">Edit</a>
+							</s:url> <a href="<s:property value="#url"/>">Editar</a>
 							&nbsp;&nbsp;&nbsp; 
 							
 							<s:url action="deleteEmployee" id="url">
-								<s:param name="employee.employeeId" value="employeeId" />
-							</s:url> <a href="<s:property value="#url"/>">Delete</a></td>
+								<s:param name="employee.employeeId"	 value="employeeId" />
+							</s:url> <a href="<s:property value="#url"/>">Deletar</a></td>
 						</tr>
 					</s:iterator>
 				</table>

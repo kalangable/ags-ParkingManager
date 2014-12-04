@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface EmployeeDao {
 
-    public List getAllEmployees();
+    public List<Employee> getAllEmployees();
 
     public Employee getEmployee(Integer id);
 
