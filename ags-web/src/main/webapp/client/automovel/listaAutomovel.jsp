@@ -16,14 +16,15 @@
 
 </head>
 <body>
-<div class="table-responsive">
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			
-				<button type="submit" id=<s:property value="id"/>
-					onclick="edit(this.id)" class="btn btn-primary pull-right">Novo</button>
-	</div>
-
+	<div class="table-responsive">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="btn-group btn-group-sx">
+					<button type="button" class="btn btn-primary" onclick="novo()">
+						<span class="glyphicon glyphicon-plus"></span>Novo
+					</button>
+				</div>
+			</div>
 
 			<div class="panel-body">
 
@@ -42,31 +43,26 @@
 							<tr>
 								<td><s:property value="placa" /></td>
 								<td><s:property value="descricao" /></td>
-								<td><button type="submit" id=<s:property value="id" />
-										onclick="view(this.id)" class="btn btn-primary btn-xs">Visualizar</button>
-									<button type="submit" id=<s:property value="id" />
-										onclick="edit(this.id)" class="btn btn-success btn-xs">Editar</button>
-									<button type="submit" id=<s:property value="id" />
-										onclick="remove(this.id)" class="btn btn-danger btn-xs">Deletar</button></td>
-							</tr>
-
+								<td>
+									<div class="btn-group btn-group-sx">
+										<button type="button" class="btn btn-primary"
+											id=<s:property value="id" /> onclick="visualizar(this.id)">
+											<span class="glyphicon glyphicon-list-alt"></span>
+										</button>
+									</div>
 						</s:iterator>
 					</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
-				</div>
 
 	<script type="text/javascript">
-		function view(clicked_id) {
+		function visualizar(clicked_id) {
 			window.location = "VisualizarAutomovel?id=".concat(clicked_id);
 		}
-		function edit(clicked_id) {
-			window.location = "EditarAutomovel?id=".concat(clicked_id);
-		}
-		function remove(clicked_id) {
-			window.location = "DeletarAutomovel?id=".concat(clicked_id);
+		function novo() {
+			window.location = "InserirAutomovel";
 		}
 	</script>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
