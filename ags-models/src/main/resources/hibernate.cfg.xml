@@ -26,5 +26,6 @@
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hbm2ddl.auto">update</property>
 		<mapping class="com.ags.models.Automovel" />
+		<mapping class="com.ags.models.Employee" />
 	</session-factory>
 </hibernate-configuration>

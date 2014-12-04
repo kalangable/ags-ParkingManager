@@ -1,12 +1,8 @@
 package com.ags.dao;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.io.Serializable;
 
-@Entity
-public class Employee {
+public class Employee implements Serializable {
 
     private Integer employeeId;
 

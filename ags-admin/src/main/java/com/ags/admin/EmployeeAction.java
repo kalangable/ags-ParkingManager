@@ -9,9 +9,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
 
 public class EmployeeAction extends ActionSupport implements Preparable {
-    /**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	private EmployeeService empService = new DefaultEmployeeService();
@@ -20,18 +18,9 @@ public class EmployeeAction extends ActionSupport implements Preparable {
     private List employees;	
     private List departments;
 
-    /**
-     * Loads employee data in case of editing, and loads departments in any case,
-     * to be displayed even in case validation fails.
-     * 
-     * @throws Exception 
-     */
     @Override
     public void prepare() throws Exception {
-        //deparments list will be always displayed, even if validation fails
         if (employee != null && employee.getEmployeeId() != null) {
-            //retrieves the employee from data source in case of editing and 
-            //employee id. exists
             employee = empService.getEmployee(employee.getEmployeeId());
         }
     }
