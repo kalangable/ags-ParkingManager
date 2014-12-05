@@ -19,7 +19,7 @@ public class FactoryDao {
 			session = getSessionFactory().openSession();
 			FactoryDao.session.set( session );
 		}
-
+		
 		return session;
 	}
 

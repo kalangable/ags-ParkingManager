@@ -21,7 +21,6 @@ public class GenericImplDao<T, PK extends Serializable>
 	}
 
 	public List<T> list() {
-
 		return getSession().createCriteria( type ).list();
 	}
 

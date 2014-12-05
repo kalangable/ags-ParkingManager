@@ -19,26 +19,12 @@ public class AutomovelAction extends ActionSupport {
 	private long id;
 
 	public String inserir() {
-
-		if ( automovelBean != null ) {
-			System.out.println( automovelBean.getPlaca() );
-			System.out.println( automovelBean.getDescricao() );
-			dao.begin();
-			System.err.println( this.dao.create( automovelBean ) );
-			dao.salvar();
-		}
+		dao.salvar( automovelBean );
 		return SUCCESS;
 	}
 
 	public String atualizar() {
-
-		System.out.println( automovelBean.getPlaca() );
-		System.out.println( automovelBean.getDescricao() );
-		System.out.println( automovelBean.getId() );
-		dao.begin();
-		this.dao.update( automovelBean );
-		dao.update();
-
+		dao.salvar( automovelBean );
 		return SUCCESS;
 	}
 
@@ -52,9 +38,7 @@ public class AutomovelAction extends ActionSupport {
 	public String deletar() {
 		System.out.println( "Recebi id:" + id );
 		automovelBean = dao.read( id );
-		dao.begin();
-		dao.delete( automovelBean );
-		dao.salvar();
+		dao.deletar( automovelBean );
 		return SUCCESS;
 	}
 

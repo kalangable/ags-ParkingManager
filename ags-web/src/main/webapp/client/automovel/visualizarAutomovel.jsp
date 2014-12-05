@@ -30,7 +30,7 @@
 					<h3>Tem certeza que deseja excluir o automóvel?</h3>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
 					<s:push value="automovelBean">
 						<a href='DeletarAutomovel?id=<s:property value="id"/>'
 							class="btn  btn-danger">Deletar</a>
@@ -51,8 +51,9 @@
 				</div>
 				<form role="form" action="AtualizarAutomovel" method="post">
 					<div class="modal-body">
-
 						<s:push value="automovelBean">
+							<input type="hidden" name="automovelBean.id" id="id"
+								value='<s:property value="id"/>'>
 							<div class="form-group">
 								<label for="placa">Placa</label> <input type="text"
 									name="automovelBean.placa" id="placa" class="form-control"
@@ -67,10 +68,9 @@
 							</div>
 						</s:push>
 						<div class="form-group"></div>
-
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
 						<button type="reset" class="btn btn-default">Limpar</button>
 						<button type="submit" class="btn btn-primary">Enviar</button>
 					</div>
