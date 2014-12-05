@@ -4,23 +4,30 @@ import java.io.Serializable;
 
 public class Employee implements Serializable {
 
-    private Integer employeeId;
+    /**
+	 * Classe que representa a entidade do empregado
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private Integer employeeId;
 
 	private Integer age;
 
 	private String firstName;
 
 	private String lastName;
-
+	
+	private String username;
 
 	public Employee() {
 	}
 
-	public Employee(Integer employeeId, String firstName, String lastName, Integer age) {
+	public Employee(Integer employeeId, String firstName, String lastName, Integer age, String username) {
 		this.employeeId = employeeId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
+		this.username = username;
 	}
 
 
@@ -55,5 +62,12 @@ public class Employee implements Serializable {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
+	
+	public String getUsername() {
+		return username;
+	}
+	
+	public void setUsername(String username) {
+		this.username = username;
+	}
 }

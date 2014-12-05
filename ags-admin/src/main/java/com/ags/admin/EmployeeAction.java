@@ -9,15 +9,20 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
 
 public class EmployeeAction extends ActionSupport implements Preparable {
-
+    /**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 
 	private EmployeeService empService = new DefaultEmployeeService();
-    
     private Employee employee;
-    private List employees;	
-    private List departments;
+    private List<Employee> employees;	
 
+    /**
+     *Carrega os dados do empregado em caso de edição
+     * 
+     * @throws Exception 
+     */
     @Override
     public void prepare() throws Exception {
         if (employee != null && employee.getEmployeeId() != null) {
@@ -61,7 +66,7 @@ public class EmployeeAction extends ActionSupport implements Preparable {
         this.employee = employee;
     }
 
-    public List getEmployees() {
+    public List<Employee> getEmployees() {
         return employees;
     }
 }

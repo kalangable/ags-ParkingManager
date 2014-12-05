@@ -1,20 +1,19 @@
 package com.ags.dao;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class InMemoryEmployeeDao implements EmployeeDao {
+
+public class EmployeeDaoImpl implements EmployeeDao {
 
     private static ArrayList<Employee> employees;
 
     static {
         employees = new ArrayList<Employee>();
-        employees.add(new Employee(1, "John", "Doe", 36));
-        employees.add(new Employee(2, "Bob", "Smith", 25));
+        employees.add(new Employee(1, "João", "Silva", 36, "jsilva"));
     }
 
     @Override
-    public List getAllEmployees() {
+    public List<Employee> getAllEmployees() {
         return employees;
     }
 

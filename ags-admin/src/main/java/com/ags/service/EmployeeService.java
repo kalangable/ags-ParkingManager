@@ -6,7 +6,7 @@ import com.ags.dao.Employee;
 
 public interface EmployeeService {
 
-    public List getAllEmployees();
+    public List<Employee> getAllEmployees();
 
     public void updateEmployee(Employee emp);
 
