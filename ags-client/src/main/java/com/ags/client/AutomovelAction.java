@@ -12,7 +12,6 @@ public class AutomovelAction extends ActionSupport {
 	 * 
 	 */
 
-
 	private static final long serialVersionUID = -7946045564136959507L;
 	private AutomovelDao dao = new AutomovelDao();
 	private List<Automovel> listaAutomovel;
@@ -24,33 +23,42 @@ public class AutomovelAction extends ActionSupport {
 		if ( automovelBean != null ) {
 			System.out.println( automovelBean.getPlaca() );
 			System.out.println( automovelBean.getDescricao() );
+			dao.begin();
 			System.err.println( this.dao.create( automovelBean ) );
 			dao.salvar();
 		}
-
 		return SUCCESS;
 	}
 
 	public String atualizar() {
 
-		if ( automovelBean != null ) {
-			System.out.println( automovelBean.getPlaca() );
-			System.out.println( automovelBean.getDescricao() );
-			System.err.println( this.dao.create( automovelBean ) );
-			dao.update();
-		}
+		System.out.println( automovelBean.getPlaca() );
+		System.out.println( automovelBean.getDescricao() );
+		System.out.println( automovelBean.getId() );
+		dao.begin();
+		this.dao.update( automovelBean );
+		dao.update();
 
 		return SUCCESS;
 	}
 
-	public String editar() {
+	public String visualizar() {
 		System.out.println( "Recebi id:" + id );
 		automovelBean = dao.read( id );
 		System.out.println( "Verificando objeto: " + automovelBean.getPlaca() );
 		return SUCCESS;
 	}
 
-	public String list() {
+	public String deletar() {
+		System.out.println( "Recebi id:" + id );
+		automovelBean = dao.read( id );
+		dao.begin();
+		dao.delete( automovelBean );
+		dao.salvar();
+		return SUCCESS;
+	}
+
+	public String listar() {
 		listaAutomovel = new ArrayList<Automovel>();
 		this.listaAutomovel = dao.list();
 		return SUCCESS;

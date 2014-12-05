@@ -9,11 +9,14 @@ public class AutomovelDao extends GenericImplDao<Automovel, Long> {
 	}
 
 	public void salvar() {
-		super.begin();
 		super.commit();
 	}
 
 	public void update() {
 		super.commit();
+	}
+
+	public void begin() {
+		super.begin();
 	}
 }

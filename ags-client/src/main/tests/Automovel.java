@@ -4,7 +4,7 @@ public class Automovel {
 
 	public void test() {
 		AutomovelAction action = new AutomovelAction();
-		System.out.println( action.list() );
+		System.out.println( action.listar() );
 
 	}
 

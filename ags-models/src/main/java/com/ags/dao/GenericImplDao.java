@@ -19,9 +19,9 @@ public class GenericImplDao<T, PK extends Serializable>
 	public T read( PK id ) {
 		return (T)getSession().get( type, id );
 	}
-	
+
 	public List<T> list() {
-		
+
 		return getSession().createCriteria( type ).list();
 	}
 
