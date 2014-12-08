@@ -25,7 +25,7 @@ public class GenericImplDao<T, PK extends Serializable>
 	}
 
 	public void update( T o ) {
-		getSession().update( o );
+		getSession().saveOrUpdate( o );
 	}
 
 	public void delete( T o ) {
