@@ -29,5 +29,32 @@
             <result name="success" type="redirectAction">index</result>
             <result name="input">WEB-INF/pages/employeeForm.jsp</result>
         </action>
+        
+        <action name="home" class="com.ags.admin.EmployeeAction" method="list">
+            <result name="success">WEB-INF/pages/index.jsp</result>
+            <interceptor-ref name="basicStack"/>
+        </action>
+        <action name="*home" class="com.ags.admin.EmployeeAction" method="{1}">
+            <result name="success" type="redirectAction">home</result>
+            <result name="input">WEB-INF/pages/index.jsp</result>
+        </action>
+        
+         <action name="empresa" class="com.ags.admin.EmployeeAction" method="list">
+            <result name="success">WEB-INF/pages/empresa.jsp</result>
+            <interceptor-ref name="basicStack"/>
+        </action>
+        <action name="*empresa" class="com.ags.admin.EmployeeAction" method="{1}">
+            <result name="success" type="redirectAction">empresa</result>
+            <result name="input">WEB-INF/pages/empresa.jsp</result>
+        </action>
+        
+         <action name="plano" class="com.ags.admin.EmployeeAction" method="list">
+            <result name="success">WEB-INF/pages/plano.jsp</result>
+            <interceptor-ref name="basicStack"/>
+        </action>
+        <action name="*plano" class="com.ags.admin.EmployeeAction" method="{1}">
+            <result name="success" type="redirectAction">plano</result>
+            <result name="input">WEB-INF/pages/plano.jsp</result>
+        </action>
 	</package>
 </struts>
