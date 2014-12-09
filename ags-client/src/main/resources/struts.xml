@@ -29,4 +29,30 @@
 				<result name="success" type="redirectAction">ListaAutomovel</result>
 			</action>
 	</package>
+	<package name="cliente" extends="struts-default">
+		<action name="ListaCliente" class="com.ags.client.ClienteAction"
+			method="listar">
+			<result name="success">client/cliente/listaCliente.jsp</result>
+		</action>
+		<action name="InserirCliente" class="com.ags.client.ClienteAction"
+			method="execute">
+			<result name="success">client/cliente/inserirCliente.jsp</result>
+		</action>
+		<action name="VisualizarCliente" class="com.ags.client.ClienteAction"
+			method="visualizar">
+			<result name="success">client/cliente/visualizarCliente.jsp</result>
+		</action>
+		<action name="AtualizarCliente" class="com.ags.client.ClienteAction"
+			method="atualizar">
+			<result name="success" type="redirectAction">ListaCliente</result>
+		</action>
+		<action name="DeletarCliente" class="com.ags.client.ClienteAction"
+			method="deletar">
+			<result name="success" type="redirectAction">ListaCliente</result>
+		</action>
+		<action name="SalvarCliente" class="com.ags.client.ClienteAction"
+			method="inserir">
+			<result name="success" type="redirectAction">ListaCliente</result>
+		</action>
+	</package>
 </struts>
