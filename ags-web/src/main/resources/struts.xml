@@ -1,0 +1,22 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="home" class="com.opensymphony.xwork2.ActionSupport"
+			method="execute">
+			<result name="success">WEB-INF/pages/index.jsp</result>
+		</action>
+
+		<action name="empresa" class="com.opensymphony.xwork2.ActionSupport"
+			method="execute">
+			<result name="success">WEB-INF/pages/empresa.jsp</result>
+		</action>
+
+		<action name="plano" class="com.opensymphony.xwork2.ActionSupport"
+			method="execute">
+			<result name="success">WEB-INF/pages/plano.jsp</result>
+		</action>
+	</package>
+</struts>
