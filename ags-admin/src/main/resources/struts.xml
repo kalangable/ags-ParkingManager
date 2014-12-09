@@ -21,12 +21,12 @@
 		<action name="HelloWorld" class="tutorial.HelloWorld">
 			<result>index.jsp</result>
 		</action>
-		<action name="index" class="com.ags.admin.EmployeeAction" method="list">
+		<action name="case" class="com.ags.admin.EmployeeAction" method="list">
             <result name="success">WEB-INF/pages/employees.jsp</result>
             <interceptor-ref name="basicStack"/>
         </action>
-        <action name="*Employee" class="com.ags.admin.EmployeeAction" method="{1}">
-            <result name="success" type="redirectAction">index</result>
+        <action name="employeer" class="com.ags.admin.EmployeeAction" method="{1}">
+            <result name="success" type="redirectAction">cadastrOperador</result>
             <result name="input">WEB-INF/pages/employeeForm.jsp</result>
         </action>
         
