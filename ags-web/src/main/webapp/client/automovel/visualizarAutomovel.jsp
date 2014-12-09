@@ -84,17 +84,18 @@
 		<div class="panel-heading">Visualizar Automóvel</div>
 		<div class="panel-body">
 			<s:push value="automovelBean">
-				<table class="table">
+				<table>
 					<tr>
 						<td>Placa:</td>
 						<td><strong><s:property value="placa" /></strong></td>
 					</tr>
+
 					<tr>
 						<td>Descrição:</td>
 						<td><strong><s:property value="descricao" /></strong></td>
 					</tr>
-				</table>
 
+				</table>
 			</s:push>
 			<div class="form-group">
 				<a href="ListaAutomovel" class="btn">Lista</a> <a href="#"
