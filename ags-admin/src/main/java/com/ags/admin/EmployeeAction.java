@@ -1,72 +1,75 @@
 package com.ags.admin;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import com.ags.dao.Employee;
-import com.ags.service.DefaultEmployeeService;
-import com.ags.service.EmployeeService;
+import com.ags.dao.EmployeeDao;
+import com.ags.models.Employee;
 import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.Preparable;
 
-public class EmployeeAction extends ActionSupport implements Preparable {
-    /**
+public class EmployeeAction extends ActionSupport {
+	
+	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	
+	private static final long serialVersionUID = -7946045564136959507L;
+	private EmployeeDao dao = new EmployeeDao();
+	private List<Employee> listaEmployee;
+	private Employee employeeBean;
+	private long id;
 
-	private EmployeeService empService = new DefaultEmployeeService();
-    private Employee employee;
-    private List<Employee> employees;	
+	public String inserir() {
+		dao.salvar( employeeBean );
+		return SUCCESS;
+	}
 
-    /**
-     *Carrega os dados do empregado em caso de edição
-     * 
-     * @throws Exception 
-     */
-    @Override
-    public void prepare() throws Exception {
-        if (employee != null && employee.getEmployeeId() != null) {
-            employee = empService.getEmployee(employee.getEmployeeId());
-        }
-    }
-    
-    /**
-     * Adds or updates the employee given by getEmployee().
-     */
-    public String save() {
-        if (employee.getEmployeeId() == null) {
-            empService.insertEmployee(employee);
-        } else {
-            empService.updateEmployee(employee);
-        }
-        return SUCCESS;
-    }
+	public String atualizar() {
+		dao.salvar( employeeBean );
+		return SUCCESS;
+	}
 
-    /**
-     * Delete employee which ID is getEmployee().getEmployeeId()
-     */
-    public String delete() {
-        empService.deleteEmployee(employee.getEmployeeId());
-        return SUCCESS;
-    }
+	public String visualizar() {
+		System.out.println( "Recebi id:" + id );
+		employeeBean = dao.read( id );
+		System.out.println( "Verificando objeto: " + employeeBean.getFirstName() );
+		return SUCCESS;
+	}
 
-    /**
-     * Returns all employees
-     */
-    public String list() {
-        employees = empService.getAllEmployees();
-        return SUCCESS;
-    }
+	public String deletar() {
+		System.out.println( "Recebi id:" + id );
+		employeeBean = dao.read( id );
+		dao.deletar( employeeBean );
+		return SUCCESS;
+	}
 
-    public Employee getEmployee() {
-        return employee;
-    }
+	public String listar() {
+		listaEmployee = new ArrayList<Employee>();
+		this.listaEmployee = dao.list();
+		return SUCCESS;
+	}
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
+	public List<Employee> getListaEmployee() {
+		return listaEmployee;
+	}
 
-    public List<Employee> getEmployees() {
-        return employees;
-    }
+	public void setListaEmployee( List<Employee> listaEmployee ) {
+		this.listaEmployee = listaEmployee;
+	}
+
+	public Employee getEmployeeBean() {
+		return employeeBean;
+	}
+
+	public void setEmployeeBean( Employee employeeBean ) {
+		this.employeeBean = employeeBean;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId( long id ) {
+		this.id = id;
+	}
 }

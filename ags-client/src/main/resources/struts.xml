@@ -2,30 +2,31 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
+
 	<package name="automovel" extends="struts-default">
-		<action name="ListaAutomovel" class="com.ags.client.AutomovelAction"
-			method="listar">
-			<result name="success">client/automovel/listaAutomovel.jsp</result>
-		</action>
-		<action name="InserirAutomovel" class="com.ags.client.AutomovelAction"
-			method="execute">
-			<result name="success">client/automovel/inserirAutomovel.jsp</result>
-		</action>
-		<action name="VisualizarAutomovel" class="com.ags.client.AutomovelAction"
-			method="visualizar">
-			<result name="success">client/automovel/visualizarAutomovel.jsp</result>
-		</action>
-		<action name="AtualizarAutomovel" class="com.ags.client.AutomovelAction"
-			method="atualizar">
-			<result name="success" type="redirectAction">ListaAutomovel</result>
-		</action>
-		<action name="DeletarAutomovel" class="com.ags.client.AutomovelAction"
-			method="deletar">
-			<result name="success" type="redirectAction">ListaAutomovel</result>
-		</action>
-		<action name="SalvarAutomovel" class="com.ags.client.AutomovelAction"
-			method="inserir">
-			<result name="success" type="redirectAction">ListaAutomovel</result>
-		</action>
+			<action name="ListaAutomovel" class="com.ags.client.AutomovelAction"
+				method="listar">
+				<result name="success">client/automovel/listaAutomovel.jsp</result>
+			</action>
+			<action name="InserirAutomovel" class="com.ags.client.AutomovelAction"
+				method="execute">
+				<result name="success">client/automovel/inserirAutomovel.jsp</result>
+			</action>
+			<action name="VisualizarAutomovel" class="com.ags.client.AutomovelAction"
+				method="visualizar">
+				<result name="success">client/automovel/visualizarAutomovel.jsp</result>
+			</action>
+			<action name="AtualizarAutomovel" class="com.ags.client.AutomovelAction"
+				method="atualizar">
+				<result name="success" type="redirectAction">ListaAutomovel</result>
+			</action>
+			<action name="DeletarAutomovel" class="com.ags.client.AutomovelAction"
+				method="deletar">
+				<result name="success" type="redirectAction">ListaAutomovel</result>
+			</action>
+			<action name="SalvarAutomovel" class="com.ags.client.AutomovelAction"
+				method="inserir">
+				<result name="success" type="redirectAction">ListaAutomovel</result>
+			</action>
 	</package>
 </struts>

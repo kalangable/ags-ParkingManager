@@ -1,22 +1,31 @@
-package com.ags.dao;
+package com.ags.models;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Employee implements Serializable {
 
     /**
 	 * Classe que representa a entidade do empregado
 	 */
 	private static final long serialVersionUID = 1L;
-
+	@Id
+	@GeneratedValue( strategy = GenerationType.AUTO )
 	private Integer employeeId;
-
-	private Integer age;
-
-	private String firstName;
-
-	private String lastName;
 	
+	@Column( length = 3 )
+	private Integer age;
+	@Column( length = 60 )
+	private String firstName;
+	@Column( length = 60 )
+	private String lastName;
+	@Column( length = 30 )
 	private String username;
 
 	public Employee() {

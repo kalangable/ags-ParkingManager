@@ -1,17 +1,29 @@
 package com.ags.dao;
 
-import java.util.List;
+import com.ags.models.Employee;
 
-public interface EmployeeDao {
 
-    public List<Employee> getAllEmployees();
+public class EmployeeDao extends GenericImplDao<Employee, Long> {
 
-    public Employee getEmployee(Integer id);
+	public EmployeeDao() {
+		super( Employee.class );
+	}
 
-    public void update(Employee emp);
+	public void salvar( Employee employee ) {
+		begin();
+		if ( employee.getEmployeeId() != null ) {
+			update( employee );
+		} else {
+			create( employee );
+		}
+		commit();
+	}
 
-    public void insert(Employee emp);
-
-    public void delete(Integer id);
-
+	public void deletar( Employee employee ) {
+		begin();
+		if ( employee.getEmployeeId() != null ) {
+			delete( employee );
+		}
+		commit();
+	}
 }
