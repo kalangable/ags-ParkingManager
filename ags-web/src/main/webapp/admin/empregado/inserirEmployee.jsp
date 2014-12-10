@@ -9,7 +9,7 @@
 <title>Registration Page</title>
 
 <s:head />
-<link rel="stylesheet" hreSWf="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="<c:url value="bootstrap/css/bootstrap-theme.min.css" />">
 
@@ -20,34 +20,31 @@
 			<div class="panel-heading">Incluir Empregado</div>
 			<div class="panel-body">
 				<form role="form" action="SalvarEmployee" method="post">
-				
 					<div class="form-group">
-						<label for="firstName">Nome</label> <input type="text"
-							name="employeeBean.firstName" id="firstName"
-							class="form-control" placeholder="Nome" required>
+						<label for="firstname">Nome</label> <input type="text"
+							name="employeeBean.firstName" id="name" class="form-control"
+							required>
 					</div>
-					
 					<div class="form-group">
-						<label for="lastName">Sobrenome</label> <input type="text"
-							name="employeeBean.lastName" id="lastName"
-							class="form-control" placeholder="Sobrenome" required>
+						<label for="lastname">Sobrenome</label> <input type="text"
+							name="employeeBean.lastName" id="name" class="form-control"
+							required>
 					</div>
-					
 					<div class="form-group">
 						<label for="age">Idade</label> <input type="text"
-							name="employeeBean.age" id="age"
-							class="form-control" placeholder="Idade" required>
+							name="employeeBean.age" id="age" class="form-control"
+							required>
 					</div>
-						<div class="form-group">
-						<label for="username">Nome de Usuário</label> <input type="text"
-							name="employeeBean.username" id="username"
-							class="form-control" placeholder="Nome de usuário" required>
+					<div class="form-group">
+						<label for="username">Idade</label> <input type="text"
+							name="employeeBean.username" id="age" class="form-control"
+							required>
 					</div>
-					
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary">Enviar</button>
 						<button type="reset" class="btn btn-default">Limpar</button>
 					</div>
+					
 				</form>
 			</div>
 		</div>

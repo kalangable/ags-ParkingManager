@@ -3,54 +3,24 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 	<package name="default" extends="struts-default">
+		<action name="*Employee" class="com.ags.admin.EmployeeAction" method="{1}">
+            <result name="success" type="redirectAction">ListaEmployee</result>
+            <result name="input">admin/empregado/inserirEmployee.jsp</result>
+        </action>
+			
 		<action name="ListaEmployee" class="com.ags.admin.EmployeeAction"
 			method="listar">
-			<result name="success">client/automovel/listaEmployee.jsp</result>
+			<result name="success">admin/empregado/listaEmployee.jsp</result>
 		</action>
 
 		<action name="InserirEmployee" class="com.ags.admin.EmployeeAction"
 			method="execute">
-			<result name="success">client/automovel/inserirEmployee.jsp</result>
+			<result name="success">admin/empregado/inserirEmployee.jsp</result>
 		</action>
 
 		<action name="SalvarEmployee" class="com.ags.admin.EmployeeAction"
 			method="inserir">
 			<result name="success" type="redirectAction">ListaEmployee</result>
 		</action>
-		<action name="case" class="com.ags.admin.EmployeeAction" method="list">
-            <result name="success">WEB-INF/pages/employees.jsp</result>
-            <interceptor-ref name="basicStack"/>
-        </action>
-        <action name="employeer" class="com.ags.admin.EmployeeAction" method="{1}">
-            <result name="success" type="redirectAction">cadastrOperador</result>
-            <result name="input">WEB-INF/pages/employeeForm.jsp</result>
-        </action>
-        
-        <action name="home" class="com.ags.admin.EmployeeAction" method="list">
-            <result name="success">WEB-INF/pages/index.jsp</result>
-            <interceptor-ref name="basicStack"/>
-        </action>
-        <action name="*home" class="com.ags.admin.EmployeeAction" method="{1}">
-            <result name="success" type="redirectAction">home</result>
-            <result name="input">WEB-INF/pages/index.jsp</result>
-        </action>
-        
-         <action name="empresa" class="com.ags.admin.EmployeeAction" method="list">
-            <result name="success">WEB-INF/pages/empresa.jsp</result>
-            <interceptor-ref name="basicStack"/>
-        </action>
-        <action name="*empresa" class="com.ags.admin.EmployeeAction" method="{1}">
-            <result name="success" type="redirectAction">empresa</result>
-            <result name="input">WEB-INF/pages/empresa.jsp</result>
-        </action>
-        
-         <action name="plano" class="com.ags.admin.EmployeeAction" method="list">
-            <result name="success">WEB-INF/pages/plano.jsp</result>
-            <interceptor-ref name="basicStack"/>
-        </action>
-        <action name="*plano" class="com.ags.admin.EmployeeAction" method="{1}">
-            <result name="success" type="redirectAction">plano</result>
-            <result name="input">WEB-INF/pages/plano.jsp</result>
-        </action>
 	</package>
 </struts>

@@ -3,7 +3,7 @@ package com.ags.dao;
 import com.ags.models.Employee;
 
 
-public class EmployeeDao extends GenericImplDao<Employee, Long> {
+public class EmployeeDao extends GenericImplDao<Employee, Integer> {
 
 	public EmployeeDao() {
 		super( Employee.class );

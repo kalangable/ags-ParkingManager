@@ -16,6 +16,8 @@
 
 </head>
 <body>
+	<s:url id="url" action="inserirEmployee" />
+
 	<div class="table-responsive">
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -33,15 +35,20 @@
 							<th>Nome</th>
 							<th>Sobrenome</th>
 							<th>Idade</th>
+							<th>Opções</th>
 					</thead>
 					<tbody>
-
 						<s:iterator value="listaEmployee">
 							<tr>
 								<td><s:property value="firstName" /></td>
 								<td><s:property value="lastName"/></td>
 								<td><s:property value="age" /></td>
-						</s:iterator>
+								<td class="nowrap"><s:url action="inputEmployee" id="url">
+										<s:param name="Id" value="employeeId" />
+									</s:url> <a href="<s:property value="#url"/>">Edit</a>
+									&nbsp;&nbsp;&nbsp; <s:url action="deleteEmployee" id="url">
+										<s:param name="Id" value="employeeId" />
+									</s:url> <a href="<s:property value="#url"/>">Delete</a></td></s:iterator>
 					</tbody>
 				</table>
 			</div>
