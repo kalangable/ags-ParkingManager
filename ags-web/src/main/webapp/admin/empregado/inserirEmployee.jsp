@@ -36,7 +36,7 @@
 							required>
 					</div>
 					<div class="form-group">
-						<label for="username">Idade</label> <input type="text"
+						<label for="username">Nome de usuário</label> <input type="text"
 							name="employeeBean.username" id="age" class="form-control"
 							required>
 					</div>
