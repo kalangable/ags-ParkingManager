@@ -17,7 +17,8 @@
 
 </head>
 <body>
-	<div class="col-md-5">
+	<jsp:include page="/WEB-INF/pages/menuInicial.jsp" />
+	<div class="col-md-6 col-md-offset-3">
 		<div class="panel panel-default">
 			<div class="panel-heading">Incluir Cliente</div>
 			<div class="panel-body">
@@ -37,7 +38,7 @@
 						<label for="dtInicio">Data Início</label> <input
 							class="datepicker" data-date-format="dd/mm/yyyy" id="dtInicio">
 					</div>
-					
+
 					<div class="form-group">
 						<label for="status">Status</label> <input type="text"
 							name="clienteBean.status" id="status" class="form-control"
@@ -52,9 +53,9 @@
 					<div class="form-group">
 						<label for="documento">Telefone</label> <input type="text"
 							name="clienteBean.telefone" id="telefone" class="form-control"
-							placeholder="(99) 99999-9999" >
+							placeholder="(99) 99999-9999">
 					</div>
-					
+
 					<div class="form-group">
 						<label for="documento">Endereço</label> <input type="text"
 							name="clienteBean.endereco" id="endereco" class="form-control"

@@ -16,7 +16,7 @@
 
 </head>
 <body>
-
+	<jsp:include page="/WEB-INF/pages/menuInicial.jsp" />
 	<div class="modal fade" id="deletar" tabindex="-1" role="dialog"
 		aria-labelledby="largeModal" aria-hidden="true">
 		<div class="modal-dialog modal-sm">

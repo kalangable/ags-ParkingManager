@@ -15,45 +15,47 @@
 	href="<c:url value="bootstrap/css/bootstrap-theme.min.css" />">
 
 </head>
-<body>
-	<div class="table-responsive">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<div class="btn-group btn-group-sx">
-					<button type="button" class="btn btn-primary" onclick="novo()">
-						<span class="glyphicon glyphicon-plus"></span>Novo
-					</button>
+<body><jsp:include page="/WEB-INF/pages/menuInicial.jsp" />
+	<div class="container">
+		<div class="table-responsive">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="btn-group btn-group-sx">
+						<button type="button" class="btn btn-primary" onclick="novo()">
+							<span class="glyphicon glyphicon-plus"></span>Novo
+						</button>
+					</div>
 				</div>
-			</div>
 
-			<div class="panel-body">
+				<div class="panel-body">
 
 
-				<!--table-->
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>Código</th>
-							<th>Descrição</th>
-							<th>Documento</th>
-					</thead>
-					<tbody>
-
-						<s:iterator value="listaCliente">
+					<!--table-->
+					<table class="table table-striped">
+						<thead>
 							<tr>
-								<td><s:property value="cdCliente" /></td>
-								<td><s:property value="dsCliente" /></td>
-								<td><s:property value="documento" /></td>
-								<td>
-									<div class="btn-group btn-group-sx">
-										<button type="button" class="btn btn-primary"
-											id=<s:property value="id" /> onclick="visualizar(this.id)">
-											<span class="glyphicon glyphicon-list-alt"></span>
-										</button>
-									</div>
-						</s:iterator>
-					</tbody>
-				</table>
+								<th>Código</th>
+								<th>Descrição</th>
+								<th>Documento</th>
+						</thead>
+						<tbody>
+
+							<s:iterator value="listaCliente">
+								<tr>
+									<td><s:property value="cdCliente" /></td>
+									<td><s:property value="dsCliente" /></td>
+									<td><s:property value="documento" /></td>
+									<td>
+										<div class="btn-group btn-group-sx">
+											<button type="button" class="btn btn-primary"
+												id=<s:property value="id" /> onclick="visualizar(this.id)">
+												<span class="glyphicon glyphicon-list-alt"></span>
+											</button>
+										</div>
+							</s:iterator>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>

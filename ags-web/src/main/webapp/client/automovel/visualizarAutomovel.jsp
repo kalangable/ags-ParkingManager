@@ -16,7 +16,8 @@
 
 </head>
 <body>
-
+	<jsp:include page="/WEB-INF/pages/menuInicial.jsp" />
+	
 	<div class="modal fade" id="deletar" tabindex="-1" role="dialog"
 		aria-labelledby="largeModal" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
@@ -79,29 +80,30 @@
 		</div>
 	</div>
 
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-heading">Visualizar Automóvel</div>
+			<div class="panel-body">
+				<s:push value="automovelBean">
+					<table>
+						<tr>
+							<td>Placa:</td>
+							<td><strong><s:property value="placa" /></strong></td>
+						</tr>
 
-	<div class="panel panel-default">
-		<div class="panel-heading">Visualizar Automóvel</div>
-		<div class="panel-body">
-			<s:push value="automovelBean">
-				<table>
-					<tr>
-						<td>Placa:</td>
-						<td><strong><s:property value="placa" /></strong></td>
-					</tr>
+						<tr>
+							<td>Descrição:</td>
+							<td><strong><s:property value="descricao" /></strong></td>
+						</tr>
 
-					<tr>
-						<td>Descrição:</td>
-						<td><strong><s:property value="descricao" /></strong></td>
-					</tr>
-
-				</table>
-			</s:push>
-			<div class="form-group">
-				<a href="ListaAutomovel" class="btn">Lista</a> <a href="#"
-					class="btn  btn-primary" data-toggle="modal" data-target="#editar">Editar</a>
-				<a href="#" class="btn  btn-danger" data-toggle="modal"
-					data-target="#deletar">Deletar</a>
+					</table>
+				</s:push>
+				<div class="form-group">
+					<a href="ListaAutomovel" class="btn">Lista</a> <a href="#"
+						class="btn  btn-primary" data-toggle="modal" data-target="#editar">Editar</a>
+					<a href="#" class="btn  btn-danger" data-toggle="modal"
+						data-target="#deletar">Deletar</a>
+				</div>
 			</div>
 		</div>
 	</div>

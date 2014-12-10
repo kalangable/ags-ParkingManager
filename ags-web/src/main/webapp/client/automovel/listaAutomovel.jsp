@@ -16,43 +16,46 @@
 
 </head>
 <body>
-	<div class="table-responsive">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<div class="btn-group btn-group-sx">
-					<button type="button" class="btn btn-primary" onclick="novo()">
-						<span class="glyphicon glyphicon-plus"></span>Novo
-					</button>
+	<jsp:include page="/WEB-INF/pages/menuInicial.jsp" />
+	<div class="container">
+		<div class="table-responsive">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="btn-group btn-group-sx">
+						<button type="button" class="btn btn-primary" onclick="novo()">
+							<span class="glyphicon glyphicon-plus"></span>Novo
+						</button>
+					</div>
 				</div>
-			</div>
 
-			<div class="panel-body">
+				<div class="panel-body">
 
 
-				<!--table-->
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>Placa</th>
-							<th>Descrição</th>
-							<th>Opções</th>
-					</thead>
-					<tbody>
-
-						<s:iterator value="listaAutomovel">
+					<!--table-->
+					<table class="table table-striped">
+						<thead>
 							<tr>
-								<td><s:property value="placa" /></td>
-								<td><s:property value="descricao" /></td>
-								<td>
-									<div class="btn-group btn-group-sx">
-										<button type="button" class="btn btn-primary"
-											id=<s:property value="id" /> onclick="visualizar(this.id)">
-											<span class="glyphicon glyphicon-list-alt"></span>
-										</button>
-									</div>
-						</s:iterator>
-					</tbody>
-				</table>
+								<th>Placa</th>
+								<th>Descrição</th>
+								<th>Opções</th>
+						</thead>
+						<tbody>
+
+							<s:iterator value="listaAutomovel">
+								<tr>
+									<td><s:property value="placa" /></td>
+									<td><s:property value="descricao" /></td>
+									<td>
+										<div class="btn-group btn-group-sx">
+											<button type="button" class="btn btn-primary"
+												id=<s:property value="id" /> onclick="visualizar(this.id)">
+												<span class="glyphicon glyphicon-list-alt"></span>
+											</button>
+										</div>
+							</s:iterator>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
